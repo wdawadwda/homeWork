@@ -1,0 +1,11 @@
+/* Fonts
+___________________________________________*/
+
+@mixin lato {font-family: 'Lato', sans-serif;}
+@mixin roboto {font-family: 'Roboto', sans-serif;}
+
+/* Center
+___________________________________________*/
+
+@mixin flexCenter {align-items: center; justify-content: center;}
+@mixin blockCenter {margin: 0% auto;}

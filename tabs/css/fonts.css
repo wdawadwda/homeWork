@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'Raleway-Regular', 'sans-serif';
+    font-weight: 400;
+    src: local('Raleway-Regular'),
+        url('/tabs/fonts/Raleway-Regular.eot') format(woff),
+        url('/tabs/fonts/Raleway-Regular.ttf') format(ttf),
+        url('/tabs/fonts/Raleway-Regular.eot') format(eot);
+        
+}
+@font-face {
+    font-family: 'OpenSans-SemiBold', 'sans-serif';
+    font-weight: 600;
+    src: local('OpenSans-SemiBold'),
+        url('/tabs/fonts/OpenSans-SemiBold.woff') format(woff),
+        url('/tabs/fonts/OpenSans-SemiBold.ttf') format(ttf),
+        url('/tabs/fonts/OpenSans-SemiBold.eot') format(eot);
+}
+@font-face {
+    font-family: 'OpenSans-Bold', 'sans-serif';
+    font-weight: 700;
+    src: local('OpenSans-Bold'),
+        url('/tabs/fonts/OpenSans-Bold.woff') format(woff),
+        url('/tabs/fonts/OpenSans-Bold.ttf') format(ttf),
+        url('/tabs/fonts/OpenSans-Bold.eot') format(eot);
+}
+@font-face {
+    font-family: 'OpenSans-Regular', 'sans-serif';
+    font-weight: 400;
+    src: local('OpenSans-Regular'),
+        url('/tabs/fonts/OpenSans-Regular-Bold.woff') format(woff),
+        url('/tabs/fonts/OpenSans-Regular.ttf') format(ttf),
+        url('/tabs/fonts/OpenSans-Regular.eot') format(eot);
+}
