@@ -24,13 +24,13 @@ a, a:hover, a:visited {text-decoration: none; cursor: pointer;}
 
 .tabs{margin: 50px 0px;
     .tabs__body{
-        .tabs__line-item{width: 600px; height: 40px; display: flex;
+        .tabs__line-item{width: 900px; height: 40px; display: flex;
             .tabs__tab{width: 200px; text-align: center; @include fFr400; font-size: 14px;
                 display: flex; @include flexCenter
             }
             .tabs__tab_1{border-left: solid 1px #C6CBCD; border-top: solid 1px #C6CBCD; border-right: solid 1px #C6CBCD;
                 border-top-right-radius: 10px; border-top-left-radius: 10px;}
-            .tabs__tab_2, .tabs__tab_3{border-bottom: solid 1px #C6CBCD;}
+            .tabs__tab_2, .tabs__tab_3, .tabs__tab_4{border-bottom: solid 1px #C6CBCD;}
         }// tabs__line-item
         .tabs__main{max-width: 1170px; display: flex; border-left: solid 1px #C6CBCD; border-bottom: solid 1px #C6CBCD; border-right: solid 1px #C6CBCD;
             .tabs__left{width: calc(1170px - 470px);
