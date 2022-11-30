@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+*,
+::before
+::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0%;
+}
+
+p {
+  margin: 0% 0% 0% 0%;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #FBF7F6;
+}
+
+input{background-color: #FBF7F6; outline: none; border: none; border-bottom: 1px solid #371030; font-weight: 400; font-size: 16px;}
+
+input::placeholder{color: #371030; font-weight: 400; font-size: 16px;}
+
+.container{max-width: 1375px; margin: 0 auto; width: 100%;}
+
+.btn{display: flex; justify-content: center; align-items: center;}
+
+.form1 {margin: 300px auto 100px auto; width: 808px; height: 351px; position: relative; z-index: 2; display: flex; background: #FBF7F6;
+border: 1px solid #FBF7F6; border-radius: 15px; box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.form1__left {width: 808px; height: 351px;
+}
+
+.form1__left__inner {margin: 31px 32px 40px 40px;}
+
+.title {font-weight: 700; font-size: 15px; color: #371030; margin-bottom: 17px;}
+
+.form1__input-wrapper_top{display: flex; margin-bottom: 21px;}
+
+.form1__input-wrapper_top input {width: 144px;
+}
+.form1__input-wrapper_top input:first-child {margin-right: 36px;}
+
+.form1__input-wrapper_bottom{display: flex; flex-direction: column;}
+
+.form1__input-wrapper_bottom input{width: 100%;}
+
+.form1__input-wrapper_bottom input:first-child{margin-bottom: 20px;}
+
+.form1__input-wrapper_bottom input:last-child{margin-bottom: 23px;}
+
+.form1__btn {font-weight: 900; font-size: 16px; color: #9A3C48; background-color: #FFB0BA; width: 325px; height: 55px;
+box-shadow: 3px 3px 0px 3px #DE8E98; border: 1px solid #FFB0BA; border-radius: 100px;
+}
+
+.form1__right {width: 526px; height: 351px;
+}
+
+.form1_wrapper {position: relative;}
+
+.form1__flower {position: absolute; z-index: 1; top: -87%; right: 60%;}
