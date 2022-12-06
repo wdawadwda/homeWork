@@ -52,6 +52,7 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
         .nav-bottom__link{width: 25%; height: 47px; display: flex; @include flexCenter;
         &:not(:last-child){border-right: 1px solid #FFFFFF;}
         &:hover{background: #FFFFFF; color: #282828; font-weight: 600; font-size: 16px; text-transform: uppercase; transition: .5s linear;}
+        &:visited{color: #FFFFFF;}
         }
     }//nav-bottom
 }//nav
@@ -61,6 +62,7 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
 .header__btn-wrapper{position: relative; z-index: 2; display: flex; justify-content: center; text-align: center; transform: translateY(1175%);
     .btn-wrapper__btn-yelow{width: 200px; height: 50px;
         &:not(:last-child){margin-right: 30px;}
+        &:visited{color: #FFFFFF;}
         span{padding: 15px 30px; @include fMontserrat500; font-size: 18px;}
     }//btn-wrapper__btn-yelow
 }//header__btn-wrapper
@@ -69,9 +71,9 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
 /**_________________________________________________________________*/
 
 .section1{background: #282828; height: 856px; margin-top: 736px; display: flex; @include flexCenter;
-    .section1__inner{border: 3px solid #FFFFFF; padding: 60px 190px;
+    .section1__inner{border: 3px solid #FFFFFF; padding: 5% 10%;
         .section1__text-wrapper{
-            .section1__title{@include fPlayfairDisplay700; font-size: 36px; display: flex; @include flexCenter;
+            .section1__title{@include fPlayfairDisplay700; font-size: 36px; display: flex; @include flexCenter; text-align: center;
                 position: relative; padding-bottom: 40px;
             &::after{content: ''; display: block; height: 1px; width: 160px; background: #FFFFFF; position: absolute; bottom: 0;}
             }//section1__title
@@ -113,10 +115,14 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
             }//section2__left_main__vino-wrapper
                 .section2__left_bottom{margin-top: 30px;
                     .section2__left_bottom__subtitle{@include fMontserrat400; font-size: 14px; line-height: 21px; margin-bottom: 30px;}
-                    .section2__left_bottom__btn-yelow{width: 255px; height: 50px;}
+                    .section2__left_bottom__btn-yelow{width: 255px; height: 50px;
+                    &:visited{color: #FFFFFF;}
+                    }
                 }//section2__left_bottom
         .section2__right{
+            .img-top{width: 100%;}
             .section2__right__bottom{margin-top: 30px;
+                img{width: 46.8%;}
                 img:first-child{margin-right: 30px;}
             }//section2__right__bottom
         }//section2__right
@@ -130,7 +136,7 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
     .section3__inner{border: 3px solid #FFFFFF; position: relative; height: 380px; padding: 105px 285px 90px 285px;
         .section3__img-left{position: absolute; left: -2%; top: -10%;}
         .section3__img-right{position: absolute; right: -5%; top: -9%;} 
-        .section3__title-form{position: absolute; right: 30%; top: -4%; width: 465px; height: 50px; display: flex; @include flexCenter;
+        .section3__title-form{position: absolute; right: 29%; top: -4%; width: 465px; height: 50px; display: flex; @include flexCenter;
             @include fPlayfairDisplay700; font-size: 36px; background-color: #282828} 
         .section3__subtitle-form{@include blockCenter; text-align: center; padding-top: 40px; position: relative;
         &::after{content: ""; display: block; height: 1px; width: 120px; background: #FFFFFF; position: absolute; top: 0; right: 40%;}
@@ -145,6 +151,7 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
             select{margin-top: 40px; @include fMontserrat500; font-size: 13px; width: 100%; border-bottom: 1px solid #FFFFFF;}
             .section3__form__btn{margin: 60px 0 90px 0; text-transform: uppercase; border: 1px solid #FFFFFF; height: 50px;
             &:hover{background-color: #FFFFFF; transition: .5s linear;}
+            &:visited{color: #FFFFFF;}
             }//section3__form__btn
         }//section3__form
     }//section3__inner
@@ -153,10 +160,11 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
 /** Footer
 /**_________________________________________________________________*/
 
-footer{background: #998431; padding: 50px 0 50px 0;}
+footer{width: 100vw; background: #998431; padding: 50px 0 50px 0;}
 .footer__nav{
     .footer__nav_nav-top{display: flex; border-top: 1px solid #FFFFFF;
         .footer__nav_nav-top__link{width: 14.5%; height: 60px; display: flex; @include flexCenter; @include fMontserrat400; font-size: 14px;
+        &:visited{color: #FFFFFF;}
         &:hover{color: #FFFFFF; font-weight: 600; font-size: 16px; text-transform: uppercase; background: #6d5d1e; transition: .5s linear;
         }
         }//footer__nav_nav-top__link
@@ -179,3 +187,50 @@ footer{background: #998431; padding: 50px 0 50px 0;}
         }//footer__nav_nav-bottom__item
     }//footer__nav_nav-bottom
 }//footer__nav
+
+
+/*! Media
+/*!_________________________________________________________________*/
+
+@media (max-width: 1315px){
+    /*?section3*/
+    .section3__img-left{display: none;}
+    .section3__img-right{display: none;}
+}
+
+@media (max-width: 1300px){
+    .section1__inner, .section2__inner, .section3__inner, .footer__nav{margin: 4.5%;}
+    /*?nav*/
+    .nav{padding: 0 4.5%;}
+    .footer__nav{margin-top: 0; margin-bottom: 0;}
+
+    /*?section2*/
+    .section2__right{display: none;}
+    .section2{
+        .section2__inner{@include flexCenter;
+            .section2__left{margin: 0;
+                .section2__left__top{text-align: center;
+                    .section2__left__top__subtitle{}
+                    .section2__left__top__title{
+                    &::after{right: 30%;}
+                    }
+                }//section2__left__top
+            }//section2__left
+        .section2__left_main{
+            .section2__left_main__vino-wrapper{
+                .section2__left_main__vino-item{
+                    &:not(:last-child){width: 97%;}
+                }//section2__left_main__vino-item
+            }//section2__left_main__vino-wrapper
+        }//section2__left_main
+        .section2__left_bottom{text-align: center;
+            .section2__left_bottom__btn-yelow{margin: 0 auto;}
+        }//section2__left_bottom
+        }//section2__inner
+    }//section2
+}
+/*!Tablet*/
+@media (max-width: 991px){}
+
+/*!Mobile*/
+@media (max-width: 767px){}
