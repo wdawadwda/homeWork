@@ -1,0 +1,31 @@
+/* Montserrat */
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: local('Montserrat'),
+        url('../fonts/Montserrat-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    src: local('Montserrat'),
+        url('../fonts/Montserrat-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    src: local('Montserrat'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('ttf');
+}
+
+/*Playfair Display*/
+
+@font-face {
+    font-family: 'MontserrPlayfair Display';
+    font-weight: 700;
+    src: local('Playfair Display'),
+        url('../fonts/PlayfairDisplay-Bold.ttf') format('ttf');
+}

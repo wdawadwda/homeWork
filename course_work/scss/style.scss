@@ -1,0 +1,181 @@
+@import "variables.scss";
+
+*,
+::before
+::after
+{box-sizing: border-box;}
+
+h1,h2,h3,h4,h5,h6 {margin: 0%;}
+
+p{margin: 0% 0% 0% 0%;}
+
+body{margin: 0;}
+
+a, a:hover, a:visited {text-decoration: none; cursor: pointer; color: #282828; transition: .5s linear;}
+
+input{border: none; outline: none; background-color: #282828;}
+select{appearance: none; outline: none; border: none; background-color: #282828; color: #FFFFFF;}
+
+
+/*! Btn */
+.btn{display: flex; text-align: center; @include flexCenter;}
+.btn-yelow{background: #99862A;
+    span{text-transform: uppercase;}
+}//btn-yelow
+
+/*! Text Color */
+.text-white{color: #FFFFFF;}
+.text-black{color: #282828;}
+
+/*! Container
+/*!_________________________________________________________________*/
+
+.container{width: 100%; max-width: 1200px; @include blockCenter;}
+
+/*! Header background
+/*!_________________________________________________________________*/
+
+.header__bg{background-image: url('../img/header/bg.png'); width: 100vw; height: 900px; position: absolute; left: 0; background-attachment: fixed; z-index: 1;
+    background-repeat: no-repeat;
+}//header__bg
+
+.section{width: 100vw;}
+
+/** Nav
+/**_________________________________________________________________*/
+
+.nav{position: relative; z-index: 2; display: block; @include blockCenter;
+    .nav-top{@include fMontserrat500; font-size: 13px; display: flex; justify-content: space-between; padding-top: 30px; padding-bottom: 20px;
+        
+    }//nav-top
+    .nav-bottom{@include fMontserrat400; font-size: 14px; display: flex; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+        .nav-bottom__link{width: 25%; height: 47px; display: flex; @include flexCenter;
+        &:not(:last-child){border-right: 1px solid #FFFFFF;}
+        &:hover{background: #FFFFFF; color: #282828; font-weight: 600; font-size: 16px; text-transform: uppercase; transition: .5s linear;}
+        }
+    }//nav-bottom
+}//nav
+
+/** Btn
+/**_________________________________________________________________*/
+.header__btn-wrapper{position: relative; z-index: 2; display: flex; justify-content: center; text-align: center; transform: translateY(1175%);
+    .btn-wrapper__btn-yelow{width: 200px; height: 50px;
+        &:not(:last-child){margin-right: 30px;}
+        span{padding: 15px 30px; @include fMontserrat500; font-size: 18px;}
+    }//btn-wrapper__btn-yelow
+}//header__btn-wrapper
+
+/** Section 1
+/**_________________________________________________________________*/
+
+.section1{background: #282828; height: 856px; margin-top: 736px; display: flex; @include flexCenter;
+    .section1__inner{border: 3px solid #FFFFFF; padding: 60px 190px;
+        .section1__text-wrapper{
+            .section1__title{@include fPlayfairDisplay700; font-size: 36px; display: flex; @include flexCenter;
+                position: relative; padding-bottom: 40px;
+            &::after{content: ''; display: block; height: 1px; width: 160px; background: #FFFFFF; position: absolute; bottom: 0;}
+            }//section1__title
+            .section1__subtitle{display: flex; @include flexCenter; margin: 40px 0 50px 0; line-height: 24px;}
+        }//section1__text-wrapper
+        img{display: block; @include blockCenter;}
+    }//section1__inner
+}//section1
+
+/** Section 2
+/**_________________________________________________________________*/
+
+.section2{background: #E6E3C4; padding: 80px 0 80px 0;
+    .section2__inner{border-top: 1px solid #998431; border-bottom: 1px solid #998431; display: flex; align-items: center; justify-content: space-between;
+        padding: 60px 0 60px 0;
+        .section2__left{margin-right: 125px; display: flex; flex-direction: column;
+            .section2__left__top{margin-bottom: 30px;
+                .section2__left__top__subtitle{@include fMontserrat400; font-size: 16px;}
+                .section2__left__top__title{margin: 30px 0 30px 0; position: relative; padding-bottom: 30px; @include fPlayfairDisplay700; font-size: 36px;
+                &::after{content: ""; display: block; height: 1px; width: 160px; background: #282828; position: absolute; bottom: 0;}
+                }//section2__left__top__title
+                .section2__left__top__subtitle2{@include fMontserrat400; font-size: 14px; line-height: 21px;}                
+            }//section2__left__top
+        }//section2__left
+            .section2__left_main{display: flex; margin-top: 30px;
+                .section2__left_main__date-wrapper{display: flex; flex-direction: column;
+                    .section2__left_main__date-item{height: 76px; width: 75px; display: flex; @include flexCenter; @include fMontserrat400; font-size: 14px;
+                        border-right: 1px solid #282828;
+                    &:not(:last-child){border-bottom: 1px solid #282828;}
+                    }//section2__left_main__date-item
+                }//section2__left_main__date-wrapper
+                .section2__left_main__vino-wrapper{display: flex; flex-direction: column;
+                    .section2__left_main__vino-item{height: 76px; width: 370px; display: flex; justify-content: center; flex-direction: column; padding-left: 3%;
+                    &:not(:last-child){border-bottom: 1px solid #282828;}
+                        .vino-item__title{@include fPlayfairDisplay700; font-size: 18px;}
+                        .vino-item__subtitle{@include fMontserrat400; font-size: 14px;}
+                    }//section2__left_main__vino-item
+                }//section2__left_main
+            }//section2__left_main__vino-wrapper
+                .section2__left_bottom{margin-top: 30px;
+                    .section2__left_bottom__subtitle{@include fMontserrat400; font-size: 14px; line-height: 21px; margin-bottom: 30px;}
+                    .section2__left_bottom__btn-yelow{width: 255px; height: 50px;}
+                }//section2__left_bottom
+        .section2__right{
+            .section2__right__bottom{margin-top: 30px;
+                img:first-child{margin-right: 30px;}
+            }//section2__right__bottom
+        }//section2__right
+    }//section2__inner
+}//section2
+
+/** Section 3
+/**_________________________________________________________________*/
+
+.section3{background: #282828; height: 580px; display: flex; @include flexCenter; padding: 129px 0 100px 0;
+    .section3__inner{border: 3px solid #FFFFFF; position: relative; height: 380px; padding: 105px 285px 90px 285px;
+        .section3__img-left{position: absolute; left: -2%; top: -10%;}
+        .section3__img-right{position: absolute; right: -5%; top: -9%;} 
+        .section3__title-form{position: absolute; right: 30%; top: -4%; width: 465px; height: 50px; display: flex; @include flexCenter;
+            @include fPlayfairDisplay700; font-size: 36px; background-color: #282828} 
+        .section3__subtitle-form{@include blockCenter; text-align: center; padding-top: 40px; position: relative;
+        &::after{content: ""; display: block; height: 1px; width: 120px; background: #FFFFFF; position: absolute; top: 0; right: 40%;}
+        }//section3__subtitle-form
+        .section3__form{margin-top: 80px;
+            .section3__form__input-top-wrapper{display: flex; @include flexCenter; justify-content: space-between;
+                input{width: 45%; border-bottom: 1px solid #FFFFFF; height: 35px;
+                &:not(:last-child){margin-right: 30px;}
+                &::placeholder{@include fMontserrat500; font-size: 13px; color: #FFFFFF;}
+                }//input
+            }//section3__form__input-top-wrapper
+            select{margin-top: 40px; @include fMontserrat500; font-size: 13px; width: 100%; border-bottom: 1px solid #FFFFFF;}
+            .section3__form__btn{margin: 60px 0 90px 0; text-transform: uppercase; border: 1px solid #FFFFFF; height: 50px;
+            &:hover{background-color: #FFFFFF; transition: .5s linear;}
+            }//section3__form__btn
+        }//section3__form
+    }//section3__inner
+}//section3
+
+/** Footer
+/**_________________________________________________________________*/
+
+footer{background: #998431; padding: 50px 0 50px 0;}
+.footer__nav{
+    .footer__nav_nav-top{display: flex; border-top: 1px solid #FFFFFF;
+        .footer__nav_nav-top__link{width: 14.5%; height: 60px; display: flex; @include flexCenter; @include fMontserrat400; font-size: 14px;
+        &:hover{color: #FFFFFF; font-weight: 600; font-size: 16px; text-transform: uppercase; background: #6d5d1e; transition: .5s linear;
+        }
+        }//footer__nav_nav-top__link
+    }//footer__nav_nav-top
+    .footer__nav_nav-bottom{display: flex; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; text-transform: uppercase;
+        .footer__nav_nav-bottom__item{width: 25%; height: 60px; display: flex; @include flexCenter; @include fMontserrat600; font-size: 14px;
+            &:not(:last-child){border-right: 1px solid #FFFFFF;}
+            &:hover:not(:nth-child(3)){color: #FFFFFF; background: #6d5d1e; transition: .5s linear;
+            }
+            .nav-bottom__item__link{color: #FFFFFF;}
+        
+        
+            .nav-bottom__item__icon{width: 100%; height: 100%; display: flex; @include flexCenter;
+            &:hover{background: #6d5d1e; transition: .5s linear;}
+            &:hover .nav-bottom__item_svg{fill: #282828; transition: .5s linear;}
+            }//nav-bottom__item__icon
+            .nav-bottom__item_svg{width: 100%; height: 30px; fill: #FFFFFF;
+                
+            }
+        }//footer__nav_nav-bottom__item
+    }//footer__nav_nav-bottom
+}//footer__nav

@@ -1,0 +1,15 @@
+/* Center
+___________________________________________*/
+
+@mixin flexCenter {align-items: center; justify-content: center;}
+@mixin blockCenter {margin: 0% auto;}
+
+/* Fonts
+___________________________________________*/
+// Montserrat: 400, 500, 600
+// Playfair Display: 700
+@mixin fMontserrat400 {font-family: 'Montserrat', sans-serif; font-weight: 400;}
+@mixin fMontserrat500 {font-family: 'Montserrat', sans-serif; font-weight: 500;}
+@mixin fMontserrat600 {font-family: 'Montserrat', sans-serif; font-weight: 600;}
+
+@mixin fPlayfairDisplay700 {font-family: 'Playfair Display', serif; font-weight: 700;}
