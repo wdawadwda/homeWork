@@ -45,11 +45,10 @@ padding-top: 115px; display: flex; @include flexCenter;
 /**_________________________________________________________________*/
 header{position: absolute; z-index: 1000; width: 100%;}
 .nav{display: block; @include blockCenter;
-    .nav-top{@include fMontserrat500; font-size: 13px; display: flex; justify-content: space-between; padding-top: 30px; padding-bottom: 20px;
-        
+    &-top{@include fMontserrat500; font-size: 13px; display: flex; justify-content: space-between; padding-top: 30px; padding-bottom: 20px;
     }//nav-top
-    .nav-bottom{@include fMontserrat400; font-size: 14px; display: flex; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
-        .nav-bottom__link{width: 25%; height: 47px; display: flex; @include flexCenter;
+    &-bottom{@include fMontserrat400; font-size: 14px; display: flex; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
+        &__link{width: 25%; height: 47px; display: flex; @include flexCenter;
         &:not(:last-child){border-right: 1px solid #FFFFFF;}
         &:hover{background: #FFFFFF; color: #282828; font-weight: 600; font-size: 16px; text-transform: uppercase; transition: .5s linear;}
         &:visited{color: #FFFFFF;}

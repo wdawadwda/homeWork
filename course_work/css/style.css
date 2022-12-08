@@ -124,7 +124,7 @@ header {
   display: block;
   margin: 0% auto;
 }
-.nav .nav-top {
+.nav-top {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 13px;
@@ -137,7 +137,7 @@ header {
   padding-top: 30px;
   padding-bottom: 20px;
 }
-.nav .nav-bottom {
+.nav-bottom {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -147,7 +147,7 @@ header {
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
 }
-.nav .nav-bottom .nav-bottom__link {
+.nav-bottom__link {
   width: 25%;
   height: 47px;
   display: -webkit-box;
@@ -160,10 +160,10 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.nav .nav-bottom .nav-bottom__link:not(:last-child) {
+.nav-bottom__link:not(:last-child) {
   border-right: 1px solid #FFFFFF;
 }
-.nav .nav-bottom .nav-bottom__link:hover {
+.nav-bottom__link:hover {
   background: #FFFFFF;
   color: #282828;
   font-weight: 600;
@@ -172,10 +172,10 @@ header {
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
 }
-.nav .nav-bottom .nav-bottom__link:visited {
+.nav-bottom__link:visited {
   color: #FFFFFF;
 }
-.nav .nav-bottom .nav-bottom__link:hover:visited {
+.nav-bottom__link:hover:visited {
   color: #282828;
 }
 
