@@ -4,21 +4,30 @@
     font-family: 'Montserrat';
     font-weight: 400;
     src: local('Montserrat'),
-        url('../fonts/Montserrat-Regular.ttf') format('ttf');
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('ttf'),
+        url('../fonts/Montserrat-Regular.eot') format('eot');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-weight: 500;
     src: local('Montserrat'),
-        url('../fonts/Montserrat-Regular.ttf') format('ttf');
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('ttf'),
+        url('../fonts/Montserrat-Medium.eot') format('eot');
 }
 
 @font-face {
     font-family: 'Montserrat';
     font-weight: 600;
     src: local('Montserrat'),
-        url('../fonts/Montserrat-SemiBold.ttf') format('ttf');
+        url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('ttf'),
+        url('../fonts/Montserrat-SemiBold.eot') format('eot');
 }
 
 /*Playfair Display*/
@@ -27,5 +36,8 @@
     font-family: 'MontserrPlayfair Display';
     font-weight: 700;
     src: local('Playfair Display'),
-        url('../fonts/PlayfairDisplay-Bold.ttf') format('ttf');
+        url('../fonts/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay-Bold.woff') format('woff'),
+        url('../fonts/PlayfairDisplay-Bold.ttf') format('ttf'),
+        url('../fonts/PlayfairDisplay-Bold.eot') format('eot');
 }
