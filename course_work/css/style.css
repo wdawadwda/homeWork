@@ -2,9 +2,13 @@
 ___________________________________________*/
 /* Fonts
 ___________________________________________*/
+/* Animation
+___________________________________________*/
 /* Center
 ___________________________________________*/
 /* Fonts
+___________________________________________*/
+/* Animation
 ___________________________________________*/
 *,
 ::before ::after {
@@ -440,7 +444,7 @@ header {
   width: 100%;
 }
 .section2 .section2__inner .section2__right .section2__right__bottom {
-  margin-top: 30px;
+  margin-top: 15%;
 }
 .section2 .section2__inner .section2__right .section2__right__bottom img {
   width: 46.8%;
@@ -706,6 +710,106 @@ footer {
   fill: #FFFFFF;
 }
 
+/* Center
+___________________________________________*/
+/* Fonts
+___________________________________________*/
+/* Animation
+___________________________________________*/
+.nav {
+  -webkit-transform: translate(0, 150%);
+          transform: translate(0, 150%);
+  opacity: 0;
+  -webkit-transition: 1s ease 0s;
+  transition: 1s ease 0s;
+}
+
+.nav.active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.section1__title, .section1__subtitle, .section1-img, .section3__title-form {
+  -webkit-transform: translate(0, 100%);
+          transform: translate(0, 100%);
+  opacity: 1;
+  -webkit-transition: 1s ease 0s;
+  transition: 1s ease 0s;
+}
+
+.section1__title.active, .section1__subtitle.active, .section1-img.active, .section3__title-form.active, .section3__form__btn.active, .btn-wrapper__btn-yelow.active,
+footer.active, .section2__left__top.active, .section2__left_main.active, .section2__left_bottom.active, .select.active, .section3__form__input-top-wrapper.active,
+.img-top.active, .section2__right__bottom.active {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+}
+
+.section3__subtitle-form p, .section3__form__input-top-wrapper, .select, .section2__left__top, .section2__left_main, .section2__left_bottom {
+  -webkit-transform: translate(60%, 0);
+          transform: translate(60%, 0);
+  opacity: 1;
+  -webkit-transition: 1s ease 0s;
+  transition: 1s ease 0s;
+}
+
+.section3__subtitle-form.active p:nth-child(1) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 1s ease 0s;
+  transition: all 1s ease 0s;
+}
+.section3__subtitle-form.active p:nth-child(2) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 1s ease 0.2s;
+  transition: all 1s ease 0.2s;
+}
+.section3__subtitle-form.active p:nth-child(3) {
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  opacity: 1;
+  -webkit-transition: all 1s ease 0.4s;
+  transition: all 1s ease 0.4s;
+}
+
+.btn-wrapper__btn-yelow {
+  opacity: 0;
+  -webkit-transition: 1.5s ease 0.5s;
+  transition: 1.5s ease 0.5s;
+}
+
+.section3__form__btn {
+  -webkit-transform: translate(0, 250%);
+          transform: translate(0, 250%);
+  opacity: 0;
+  -webkit-transition: 1s ease 0s;
+  transition: 1s ease 0s;
+}
+
+footer {
+  opacity: 0;
+  -webkit-transition: 1.5s ease 0.1s;
+  transition: 1.5s ease 0.1s;
+}
+
+.img-top, .section2__right__bottom {
+  -webkit-transform: translate(-60%, 0);
+          transform: translate(-60%, 0);
+  opacity: 1;
+  -webkit-transition: 1s ease 0s;
+  transition: 1s ease 0s;
+}
+
+/* Center
+___________________________________________*/
+/* Fonts
+___________________________________________*/
+/* Animation
+___________________________________________*/
 /*! Media
 /*!_________________________________________________________________*/
 @media (max-width: 1500px) {
@@ -735,10 +839,24 @@ footer {
   .section3__img-right {
     display: none;
   }
+  .section3 {
+    padding: 5% 0 5% 0;
+  }
 }
 @media (max-width: 1300px) {
   .container {
     max-width: 800px;
+  }
+  .section3__subtitle-form p, .section3__form__input-top-wrapper, .select {
+    -webkit-transform: translate(0, 350%);
+            transform: translate(0, 350%);
+  }
+  .section2__left_main {
+    -webkit-transform: translate(-60%, 0);
+            transform: translate(-60%, 0);
+    opacity: 1;
+    -webkit-transition: 1s ease 0s;
+    transition: 1s ease 0s;
   }
   /*?bg*/
   .header__bg {
@@ -833,6 +951,13 @@ footer {
 }
 /*!Tablet*/
 @media (max-width: 990px) {
+  .section2__left__top, .section2__left_main, .section2__left_bottom {
+    -webkit-transform: translate(0, 100%);
+            transform: translate(0, 100%);
+    opacity: 1;
+    -webkit-transition: 1s ease 0s;
+    transition: 1s ease 0s;
+  }
   .container {
     max-width: 700px;
   }

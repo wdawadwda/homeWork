@@ -1,0 +1,33 @@
+@import "variables.scss";
+
+.nav{
+    transform: translate(0, 150%); opacity: 0; transition: 1s ease 0s;
+}
+
+.nav.active{
+    transform: translate(0, 0); opacity: 1;
+}
+
+.section1__title, .section1__subtitle, .section1-img, .section3__title-form{
+    @include active;
+}
+
+.section1__title.active, .section1__subtitle.active, .section1-img.active, .section3__title-form.active, .section3__form__btn.active, .btn-wrapper__btn-yelow.active,
+footer.active, .section2__left__top.active, .section2__left_main.active, .section2__left_bottom.active, .select.active, .section3__form__input-top-wrapper.active,
+.img-top.active, .section2__right__bottom.active{
+    @include passive;
+}
+
+.section3__subtitle-form p, .section3__form__input-top-wrapper, .select, .section2__left__top, .section2__left_main, .section2__left_bottom{@include activeLeft;}
+
+.section3__subtitle-form.active p{
+    &:nth-child(1){transform: translate(0, 0); opacity: 1; transition: all 1s ease 0s;}
+    &:nth-child(2){transform: translate(0, 0); opacity: 1; transition: all 1s ease .2s;}
+    &:nth-child(3){transform: translate(0, 0); opacity: 1; transition: all 1s ease .4s;}
+}
+
+.btn-wrapper__btn-yelow{opacity: 0; transition: 1.5s ease .5s;}
+.section3__form__btn{transform: translate(0, 250%); opacity: 0; transition: 1s ease 0s;}
+footer{opacity: 0; transition: 1.5s ease .1s;}
+
+.img-top, .section2__right__bottom{@include activeRight;}

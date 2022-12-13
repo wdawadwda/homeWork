@@ -13,3 +13,12 @@ ___________________________________________*/
 @mixin fMontserrat600 {font-family: 'Montserrat', sans-serif; font-weight: 600;}
 
 @mixin fPlayfairDisplay700 {font-family: 'Playfair Display', serif; font-weight: 700;}
+
+/* Animation
+___________________________________________*/
+
+@mixin active {transform: translate(0, 100%); opacity: 1; transition: 1s ease 0s;}
+@mixin passive {transform: translate(0, 0); opacity: 1;}
+
+@mixin activeLeft {transform: translate(60%, 0); opacity: 1; transition: 1s ease 0s;}
+@mixin activeRight {transform: translate(-60%, 0); opacity: 1; transition: 1s ease 0s;}

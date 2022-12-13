@@ -1,3 +1,4 @@
+@import "variables.scss";
 /*! Media
 /*!_________________________________________________________________*/
 @media (max-width: 1500px){
@@ -15,10 +16,13 @@
     /*?section3*/
     .section3__img-left{display: none;}
     .section3__img-right{display: none;}
+    .section3{padding: 5% 0 5% 0;}
 }
 
 @media (max-width: 1300px){
     .container{max-width: 800px;}
+    .section3__subtitle-form p, .section3__form__input-top-wrapper, .select{transform: translate(0, 350%);}
+    .section2__left_main{@include activeRight}
 
     /*?bg*/
     .header__bg{background: url('../img/header/media/bg_1300.png'); background-repeat: no-repeat; height: 609px; padding: 0%; background-attachment: fixed;}
@@ -56,6 +60,7 @@
 
 /*!Tablet*/
 @media (max-width: 990px){
+    .section2__left__top, .section2__left_main, .section2__left_bottom{@include active;}
     .container{max-width: 700px;}
 
     /*?nav*/
