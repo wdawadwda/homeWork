@@ -17,8 +17,10 @@ ___________________________________________*/
 /* Animation
 ___________________________________________*/
 
-@mixin active {transform: translate(0, 100%); opacity: 1; transition: 1s ease 0s;}
+@mixin active {transform: translate(0, 100%); opacity: 0; transition: 1s ease 0s;}
+@mixin activeLeft {transform: translate(60%, 0); opacity: 0; transition: 1s ease 0s;}
+@mixin activeRight {transform: translate(-60%, 0); opacity: 0; transition: 1s ease 0s;}
+
 @mixin passive {transform: translate(0, 0); opacity: 1;}
 
-@mixin activeLeft {transform: translate(60%, 0); opacity: 1; transition: 1s ease 0s;}
-@mixin activeRight {transform: translate(-60%, 0); opacity: 1; transition: 1s ease 0s;}
+@mixin tra5 {transition: .5s linear;}

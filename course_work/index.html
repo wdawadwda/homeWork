@@ -7,9 +7,20 @@
     <title>Главная</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/fonts.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js" integrity="sha512-6ORWJX/LrnSjBzwefdNUyLCMTIsGoNP6NftMy2UAm1JBm6PRZCO1d7OHBStWpVFZLO+RerTvqX/Z9mBFfCJZ4A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <g>
+    <svg style="display: none;">
+        <symbol id="burger" viewBox="0 0 250.579 250.579">
+            <path d="M22.373,76.068h205.832c12.356,0,22.374-10.017,22.374-22.373c0-12.356-10.017-22.373-22.374-22.373H22.373C10.017,31.323,0,41.339,0,53.696C0,66.052,10.017,76.068,22.373,76.068zM228.205,102.916H22.373C10.017,102.916,0,112.933,0,125.289c0,12.357,10.017,22.373,22.373,22.373h205.832c12.356,0,22.374-10.016,22.374-22.373C250.579,112.933,240.561,102.916,228.205,102.916z M228.205,174.51H22.373C10.017,174.51,0,184.526,0,196.883c0,12.356,10.017,22.373,22.373,22.373h205.832c12.356,0,22.374-10.017,22.374-22.373C250.579,184.526,240.561,174.51,228.205,174.51z"/>
+        </symbol>
+    </svg>
+    <svg style="display: none;">
+        <symbol id="upDown" viewBox="0 0 314.063 314.063">
+            <path d="M235.532,21.063C160.437-22.289,64.413,3.431,21.062,78.53C-22.294,153.615,3.43,249.643,78.527,293.007c75.087,43.345,171.119,17.617,214.476-57.47C336.363,160.438,310.619,64.41,235.532,21.063z M265.8,219.836c-34.688,60.075-111.503,80.653-171.574,45.961C34.157,231.116,13.564,154.306,48.249,94.231c34.683-60.082,111.507-80.666,171.578-45.975C279.898,82.932,300.484,159.756,265.8,219.836z M190.333,126.415l-33.302,33.31l-33.308-33.31c-6.125-6.118-16.072-6.118-22.201,0c-6.133,6.133-6.133,16.078,0,22.209l44.408,44.407c6.125,6.131,16.072,6.131,22.202,0.004l44.402-44.411c6.127-6.131,6.127-16.076,0-22.209C206.41,120.289,196.459,120.289,190.333,126.415z"/>
+        </symbol>
+    </svg>
     <svg style="display: none;">
         <symbol id="youtube" viewBox="0 0 30 30">
             <path style=" stroke:none;fill-rule:nonzero;" d="M 15 4 C 10.8125 4 5.378906 5.046875 5.378906 5.046875 L 5.367188 5.066406 C 3.460938 5.371094 2 7.007812 2 9 L 2 21 C 2.003906 22.96875 3.433594 24.640625 5.375 24.945312 L 5.378906 24.949219 C 5.378906 24.949219 10.8125 26 15 26 C 19.1875 26 24.617188 24.949219 24.617188 24.949219 L 24.621094 24.949219 C 26.566406 24.644531 27.996094 22.96875 28 21 L 28 9 C 27.996094 7.035156 26.566406 5.359375 24.621094 5.054688 L 24.617188 5.050781 C 24.617188 5.050781 19.1875 4 15 4 Z M 12 10.398438 L 20 15 L 12 19.601562 Z M 12 10.398438 "/>
@@ -26,10 +37,38 @@
         </symbol>
     </svg>
 </g>
+    <!--! Nav fixed -->
+    <div class="nav-fixed" id="nav-fixed">
+        <div class="nav-fixed__link-wrapper" id="nav-fixed__link-wrapper">
+            <a href="#" class="nav-fixed__link-wrapper__link text-black">Доставка</a>
+            <a href="#" class="nav-fixed__link-wrapper__link text-black">Каталог</a>
+            <a href="#" class="nav-fixed__link-wrapper__link text-black">Коллекции</a>
+            <a href="#" class="nav-fixed__link-wrapper__link text-black">Контакты</a>
+        </div>
+        <a href="#" class="burger-wrapper" id="burger-wrapper">
+            <svg class="burger-wrapper__svg">
+                <use xlink:href="#burger"></use>
+            </svg>
+        </a>
+    </div>
+
+    <!--! Up Down Buttons -->
+    <div class="up-down-wrapper">
+        <a href="#header" class="up-down-wrapper__svg-wrapper">
+            <svg class="up-down-wrapper__up_svg">
+                <use xlink:href="#upDown"></use>
+            </svg>
+        </a>
+        <a href="#footer" class="up-down-wrapper__svg-wrapper">
+            <svg class="up-down-wrapper__down_svg">
+                <use xlink:href="#upDown"></use>
+            </svg>
+        </a>
+    </div>
         <!--! header -->
-<header>
+<header id="header">
 <div class="container">
-    <nav class="nav anim anim-no-hide">
+    <nav class="nav anim /*anim-hide*/">
         <div class="nav-top">
             <div class="nav-top__left text-white">
                 Новокузнечный переулок 4/1
@@ -48,11 +87,11 @@
 </div> <!-- container -->
 </header>
     <!--! bg -->
-<div class="header__bg">
+<div class="header__bg" id="header__bg">
 <div class="container">
     <div class="header__btn-wrapper">
-        <a href="#" class="btn-wrapper__btn-yelow btn-yelow btn text-white anim anim-no-hide"><span>Винная карта</span></a>
-        <a href="#" class="btn-wrapper__btn-yelow btn-yelow btn text-white anim anim-no-hide"><span>Дегустация</span></a>
+        <a href="#" class="btn-wrapper__btn-yelow btn-yelow btn text-white anim /*anim-hide*/"><span>Винная карта</span></a>
+        <a href="#" class="btn-wrapper__btn-yelow btn-yelow btn text-white anim /*anim-hide*/"><span>Дегустация</span></a>
     </div> <!--* header__btn-wrapper -->
 </div> <!-- container -->
 </div> <!--* bg -->
@@ -63,14 +102,14 @@
 <div class="container">
     <div class="section1__inner">
         <div class="section1__text-wrapper">
-            <div class="section1__title text-white anim anim-no-hide">
+            <div class="section1__title text-white anim /*anim-hide*/">
                 Лучший вкус, это вкус долголетнего вина
             </div> <!-- section1__title -->
-            <div class="section1__subtitle text-white anim anim-no-hide">
+            <div class="section1__subtitle text-white anim /*anim-hide*/">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. Felis adipiscing morbi sodales ac. Mauris dictumst risus pulvinar blandit elit. Vestibulum quam ultrices nascetur et viverra suscipit. Proin vitae aliquet leo aliquam amet rutrum. Lectus auctor purus ultrices enim ultrices. Augue fringilla tellus tortor orci ultrices sed. Viverra cras sapien, pellentesque viverra malesuada. Tellus dolor, eget vitae dignissim molestie eget sit duis. Vitae dui vel pretium euismod diam. Pellentesque amet, lacus, amet, quis risus. Pellentesque scelerisque nunc, orci aliquam quis.
             </div> <!-- section1__subtitle -->
         </div> <!--* section1__inner__text-wrapper -->
-        <img class="section1-img anim anim-no-hide" src="./img/main/section_1/image.png" alt="">
+        <img class="section1-img anim /*anim-hide*/" src="./img/main/section_1/image.png" alt="">
     </div> <!--* section1__inner -->
 </div> <!-- container -->
 </section><!-- section 1 -->
@@ -81,7 +120,7 @@
     <div class="section2__inner">
         <div class="section2__left">
                     <!--! section2__left__top -->
-            <div class="section2__left__top anim anim-no-hide">
+            <div class="section2__left__top anim /*anim-hide*/">
                 <div class="section2__left__top__subtitle text-black">
                     Новинки коллекций
                 </div>
@@ -98,7 +137,7 @@
             </div> <!--! section2__left__top -->
 
                     <!--! section2__left__main -->
-            <div class="section2__left_main anim anim-no-hide">
+            <div class="section2__left_main anim /*anim-hide*/">
                 <div class="section2__left_main__date-wrapper">
                     <div class="section2__left_main__date-item text-black">1980</div>
                     <div class="section2__left_main__date-item text-black">1980</div>
@@ -121,7 +160,7 @@
             </div> <!--! section2__left_main -->
 
                     <!--! section2__left_bottom -->
-            <div class="section2__left_bottom anim anim-no-hide">
+            <div class="section2__left_bottom anim /*anim-hide*/">
                 <div class="section2__left_bottom__subtitle text-black">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     <p>Feugiat enim tortor in hac id imperdiet adipiscing.</p>
@@ -132,8 +171,8 @@
             </div> <!--! section2__left_bottom -->
         </div> <!--* section2__left -->
         <div class="section2__right">
-            <img class="img-top anim anim-no-hide" src="./img/main/section_2/section2__right.png" alt="">
-            <div class="section2__right__bottom anim anim-no-hide">
+            <img class="img-top anim /*anim-hide*/" src="./img/main/section_2/section2__right.png" alt="">
+            <div class="section2__right__bottom anim /*anim-hide*/">
                 <img src="./img/main/section_2/section2__right__bottom1.png" alt="">
                 <img src="./img/main/section_2/section2__right__bottom2.png" alt="">
             </div> <!-- section2__right__bottom -->
@@ -148,23 +187,23 @@
     <div class="section3__inner">
         <img class="section3__img-left" src="./img/main/section_3/left.png" alt=""></img>
         <img class="section3__img-right" src="./img/main/section_3/right.png" alt=""></img>
-        <div class="section3__title-form text-white anim anim-no-hide">Запись на дегустацию</div>
-        <div class="section3__subtitle-form text-white anim anim-no-hide"> 
+        <div class="section3__title-form text-white anim /*anim-hide*/">Запись на дегустацию</div>
+        <div class="section3__subtitle-form text-white anim /*anim-hide*/"> 
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat</p>
             <p>enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit</p>
             <p>non sit sed fermentum.</p>
         </div> <!-- section3__subtitle-form -->
         <form method="post" class="section3__form">
-            <div class="section3__form__input-top-wrapper anim anim-no-hide">
+            <div class="section3__form__input-top-wrapper anim /*anim-hide*/">
                 <input name="name" type="text" placeholder="Имя">
                 <input name="phone" type="tel" placeholder="Телефон">
             </div> <!-- section3__form__input-top-wrapper -->
-            <select class="select anim anim-no-hide" name="address">
+            <select class="select anim /*anim-hide*/" name="address">
                 <option value="Бутик на Невском 103" class="text-white">Бутик на Невском 103</option>
                 <option value="Бутик на Невском 103" class="text-white">Бутик на Невском 103</option>
                 <option value="Бутик на Невском 103" class="text-white">Бутик на Невском 103</option>
             </select>
-            <a href="#" class="section3__form__btn btn text-white  anim anim-no-hide" type="submit"><span>записаться</span></a>
+            <a href="#" class="section3__form__btn btn text-white  anim /*anim-hide*/" type="submit"><span>записаться</span></a>
         </form> <!-- section3__form -->
     </div> <!--* section3__inner -->
 </div> <!-- container -->
@@ -172,7 +211,7 @@
 </main>
 
         <!--! footer -->
-<footer class="anim anim-no-hide">
+<footer class="anim /*anim-hide*/" id="footer">
 <div class="container">
 <nav class="footer__nav">
     <div class="footer__nav_nav-top">
@@ -216,6 +255,7 @@
 </div> <!-- container -->
 </footer> <!-- footer -->
 <script src="./js/animation.js"></script>
+<script src="./js/nav.js"></script>
 </body>
 </div>
 </html>

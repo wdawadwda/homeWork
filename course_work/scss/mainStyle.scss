@@ -11,7 +11,7 @@ p{margin: 0% 0% 0% 0%;}
 
 body{margin: 0;}
 
-a, a:hover, a:visited {text-decoration: none; cursor: pointer; color: #282828; transition: .5s linear;}
+a, a:hover, a:visited {text-decoration: none; cursor: pointer; color: #282828; @include tra5;}
 
 input{border: none; outline: none; background-color: #282828;}
 select{appearance: none; outline: none; border: none; background-color: #282828; color: #FFFFFF;}
@@ -32,6 +32,41 @@ select{appearance: none; outline: none; border: none; background-color: #282828;
 
 .container{width: 100%; max-width: 1200px; @include blockCenter;}
 
+/*! Nav fixed
+/*!_________________________________________________________________*/
+
+.nav-fixed{position: fixed; z-index: 1000; background-color: #99862A; width: 100vw; @include flexCenter; display: none;
+    &__link-wrapper{display: flex; width: 100%;  @include flexCenter;
+        &__link{display: flex; @include flexCenter; width: 25%; height: 50px; @include fPlayfairDisplay700; font-size: 16px; text-transform: uppercase;
+            &:hover{background-color: #8d7c36; color: #FFFFFF; @include tra5;}
+            }
+    }
+}
+.nav-fixed.flex{display: flex;} // Через js
+
+/*! Burger
+/*!_________________________________________________________________*/
+.nav-fixed{
+    .burger-wrapper {width: 100%; height: 100%; height: 35px; justify-content: center; display: none;}
+}
+
+
+
+/*! Up Down Buttons
+/*!_________________________________________________________________*/
+
+.up-down-wrapper{width: 100px; display: flex; @include flexCenter; flex-direction: column; background-color: #99862A; position: fixed; right: 1%; bottom: 50%; cursor: pointer;
+    &__svg-wrapper{width: 100%; height: 75px; display: flex; @include flexCenter;
+        &:hover{background-color: #8d7c36;}
+        &:hover .up-down-wrapper__down_svg{fill: #282828; @include tra5;}
+        &:hover .up-down-wrapper__up_svg{fill: #282828; @include tra5;}
+    }
+        &__up_svg, &__down_svg{width: 100%; height: 30px; fill: #FFFFFF;
+            &:hover{fill: #282828; @include tra5;}
+        }
+        &__up_svg{transform: rotate(180deg);}
+}
+
 /*! Header background
 /*!_________________________________________________________________*/
 
@@ -50,7 +85,7 @@ header{position: absolute; z-index: 1000; width: 100%;}
     &-bottom{@include fMontserrat400; font-size: 14px; display: flex; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF;
         &__link{width: 25%; height: 47px; display: flex; @include flexCenter;
         &:not(:last-child){border-right: 1px solid #FFFFFF;}
-        &:hover{background: #FFFFFF; color: #282828; font-weight: 600; font-size: 16px; text-transform: uppercase; transition: .5s linear;}
+        &:hover{background: #FFFFFF; color: #282828; font-weight: 600; font-size: 16px; text-transform: uppercase; @include tra5;}
         &:visited{color: #FFFFFF;}
         &:hover:visited{color: #282828;}
         }
@@ -64,7 +99,7 @@ header{position: absolute; z-index: 1000; width: 100%;}
         &:not(:last-child){margin-right: 30px;}
         &:visited{color: #FFFFFF;}
         span{padding: 15px 30px; @include fMontserrat500; font-size: 18px;
-            &:hover{color: #282828; @include fMontserrat500; transition: .5s linear;}
+            &:hover{color: #282828; @include fMontserrat500; @include tra5;}
         }
     }//btn-wrapper__btn-yelow
 }//header__btn-wrapper
@@ -119,7 +154,7 @@ header{position: absolute; z-index: 1000; width: 100%;}
                 .section2__left_bottom__subtitle{@include fMontserrat400; font-size: 14px; line-height: 21px; padding-bottom: 10%;}
                 .section2__left_bottom__btn-yelow{width: 255px; height: 50px;
                 &:visited{color: #FFFFFF;}
-                &:hover{color: #282828; transition: .5s linear;}
+                &:hover{color: #282828; @include tra5;}
                 }
             }//section2__left_bottom
         .section2__right{
@@ -154,7 +189,7 @@ header{position: absolute; z-index: 1000; width: 100%;}
             }//section3__form__input-top-wrapper
             select{margin-top: 40px; @include fMontserrat500; font-size: 13px; width: 100%; height: 38px; border-bottom: 1px solid #FFFFFF;}
             .section3__form__btn{margin: 10% 0 0 0; text-transform: uppercase; border: 1px solid #FFFFFF; height: 50px; font-size: 16px;
-            &:hover{background-color: #FFFFFF; transition: .5s linear;}
+            &:hover{background-color: #FFFFFF; @include tra5;}
             &:visited{color: #FFFFFF;}
             &:hover:visited{color: #282828;}
             }//section3__form__btn
@@ -170,21 +205,21 @@ footer{width: 100vw; background: #998431; padding: 50px 0 50px 0;}
     .footer__nav_nav-top{display: flex; border-top: 1px solid #FFFFFF;
         .footer__nav_nav-top__link{width: 14.5%; height: 60px; display: flex; @include flexCenter; @include fMontserrat400; font-size: 14px;
         &:visited{color: #FFFFFF;}
-        &:hover{color: #FFFFFF; font-weight: 600; font-size: 16px; text-transform: uppercase; background: #6d5d1e; transition: .5s linear;
+        &:hover{color: #FFFFFF; font-weight: 600; font-size: 16px; text-transform: uppercase; background: #6d5d1e; @include tra5;
         }
         }//footer__nav_nav-top__link
     }//footer__nav_nav-top
     .footer__nav_nav-bottom{display: flex; border-top: 1px solid #FFFFFF; border-bottom: 1px solid #FFFFFF; text-transform: uppercase;
         .footer__nav_nav-bottom__item{width: 25%; height: 60px; display: flex; @include flexCenter; @include fMontserrat600; font-size: 14px;
             &:not(:last-child){border-right: 1px solid #FFFFFF;}
-            &:hover:not(:nth-child(3)){color: #FFFFFF; background: #6d5d1e; transition: .5s linear;
+            &:hover:not(:nth-child(3)){color: #FFFFFF; background: #6d5d1e; @include tra5;
             }
             .nav-bottom__item__link{color: #FFFFFF;}
         
         
             .nav-bottom__item__icon{width: 100%; height: 100%; display: flex; @include flexCenter;
-            &:hover{background: #6d5d1e; transition: .5s linear;}
-            &:hover .nav-bottom__item_svg{fill: #282828; transition: .5s linear;}
+            &:hover{background: #6d5d1e; @include tra5;}
+            &:hover .nav-bottom__item_svg{fill: #282828; @include tra5;}
             }//nav-bottom__item__icon
             .nav-bottom__item_svg{width: 100%; height: 30px; fill: #FFFFFF;
                 

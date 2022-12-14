@@ -18,7 +18,7 @@ if (animItems.length > 0){ // Проверяем наличие анимиров
             if ((pageYOffset > animOffset - animPoint) && pageYOffset < (animOffset + animH)) { // pageYOffset - кол-во проскроленный пикселей]
                 animItem.classList.add('active');
             }else{
-                if (!animItem.classList.contains('anim-no-hide')) {
+                if (!animItem.classList.contains('anim-hide')) {
                     animItem.classList.remove('active'); // Для повторной анимации объекта
                 }
             }
