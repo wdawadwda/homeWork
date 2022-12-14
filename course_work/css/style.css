@@ -1262,7 +1262,7 @@ ___________________________________________*/
   }
   .header__btn-wrapper .btn-wrapper__btn-yelow span {
     text-transform: none;
-    font-size: 14px;
+    font-size: 11px;
   }
   /*?section1*/
   .section1 {
@@ -1328,9 +1328,6 @@ ___________________________________________*/
   /*?btn*/
   .header__btn-wrapper .btn-wrapper__btn-yelow:not(:last-child) {
     margin-right: 15px;
-  }
-  .header__btn-wrapper .btn-wrapper__btn-yelow span {
-    font-size: 12px;
   }
   .header__btn-wrapper .btn-wrapper__btn-yelow {
     width: 140px;
