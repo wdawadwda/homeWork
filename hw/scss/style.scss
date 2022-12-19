@@ -1,0 +1,92 @@
+*,
+::before
+::after
+{box-sizing: border-box;}
+
+h1,h2,h3,h4,h5,h6 {margin: 0%;}
+p{margin: 0% 0% 0% 0%;}
+
+body{margin: 0;}
+
+a, a:hover, a:visited {text-decoration: none; cursor: pointer; color: black;}
+
+.title{text-align: center; margin-top: 150px;
+    &:first-child{margin-top: 25px;}
+}
+
+/*! Container
+/*!_________________________________________________________________*/
+
+.container{width: 100%; max-width: 1140px; margin: 0 auto;}
+
+/*! Section
+/*!_________________________________________________________________*/
+
+.section{margin: 100px 0 50px 0;}
+
+/*! Section 1
+/*!_________________________________________________________________*/
+
+.section1{
+    .section1__block-wrapper{display: flex; align-items: center; justify-content: center;
+        &__block{border: 1px solid black; width: 150px; height: 150px; position: relative; background-color: black;
+            &:not(:last-child){margin-right: 150px;}
+            &__ring{color: black; position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); font-size: 170px;}
+                &/*::after,*/::before{content: ""; padding: 0.7em 0.4em; position: absolute; left: 50%; width: 115%; top: 50%; display: block;
+                    border: 5px solid #50c9c3; border-radius: 50%; transition: transform 1s; transform: translateX(-50%) translateY(-50%) rotate(60deg);}
+                // &::after{border-color: rgba(235, 235, 235) rgba(235, 235, 235) rgb(0, 0, 0) rgb(0, 0, 0);}
+                &::before{border-color: rgb(0, 0, 0, 0) rgb(0, 0, 0, 0) rgba(235, 235, 235) rgba(235, 235, 235); z-index: -1;}
+                &:hover{
+                    &/*::after,*/::before{transform: translateX(-50%) translateY(-50%) rotate(310deg);}
+                }
+        }
+    }
+}
+
+/*! Section 2
+/*!_________________________________________________________________*/
+
+.section2{
+    .section2__block-wrapper{display: flex; align-items: center; justify-content: center; position: relative; height: 300px;
+        &__block{border: 1px solid black; border-radius: 10%; background-color: black; width: 150px; height: 150px; position: relative; position: absolute;
+            &:nth-child(1){border: 1px solid aqua; background-color: aqua; transform: translate3d(100px, 0px, 0) scale(0.7);
+                animation:s2_block1 5s ease-in-out 0s infinite;
+            }
+            &:nth-child(2){z-index: 1; transform: scale(1);
+                animation:s2_block2 5s ease-in-out 0s infinite;
+            }
+            &:nth-child(3){border: 1px solid blue; background-color: blue; transform: translate3d(-100px, 0px, 0) scale(0.7);
+                animation:s2_block3 5s ease-in-out 0s infinite;
+            }
+        }
+    }
+}
+@keyframes s2_block1{
+	0%{transform: translate3d(100px, 0px, 0) scale(0.7); z-index: 0;}
+	25%{transform: translate3d(-100px, 0px, 0) scale(0.7); z-index: 0;}
+	50%{transform: translate3d(0px, 0px, 0) scale(1); z-index: 1;}
+	100%{transform: translate3d(100px, 0px, 0) scale(0.7); z-index: 0;}
+}
+@keyframes s2_block2{
+	0%{transform: translate3d(0px, 0px, 0) scale(1); z-index: 1;}
+	25%{transform: translate3d(100px, 0px, 0) scale(0.7); z-index: 0;}
+	50%{transform: translate3d(-100px, 0px, 0) scale(0.7); z-index: 0;}
+	100%{transform: translate3d(0px, 0px, 0) scale(1); z-index: 1;}
+}
+@keyframes s2_block3{
+	0%{transform: translate3d(-100px, 0px, 0) scale(0.7); z-index: 0;}
+	25%{transform: translate3d(0px, 0px, 0) scale(1); z-index: 1;}
+	50%{transform: translate3d(100px, 0px, 0) scale(0.7); z-index: 0;}
+	100%{transform: translate3d(-100px, 0px, 0) scale(0.7); z-index: 0;}
+}
+
+/*! Section 3
+/*!_________________________________________________________________*/
+
+.section3{
+    .section3__circle-wrapper{border: 3px solid aqua; background-color: aqua; border-radius: 50%; width: 350px; height: 350px; margin: 50px auto;
+        &__circle{background-color: #fff;
+
+        }
+    }
+}
