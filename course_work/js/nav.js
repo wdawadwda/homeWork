@@ -26,5 +26,4 @@ let burger = $("#burger-wrapper")
 burger.on("click", function(event) {
     event.preventDefault();
     nav.toggleClass("show");
-
 });
